@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="demo.css">
+</head>
+<body style="margin: 20px;">
+
+    Firstname <input id="firstnam" type="text" /> <br><br>
+    Lastname <input id="lastnam" type="text" /> <br><br>
+    <input type="button" value="Click me" onclick="displayname()"/>
+    
+        <p id='firstname'> </p>
+        <p id='lastname'>  </p>
+    
+
+    <script>
+        function Person(firstname,lastname){
+            this.firstname = firstname;
+            this.lastname = lastname
+        }
+
+        let person1 = new Person('Chris', 'Evert')
+
+        // console.log('Person1 : '+ person1)
+        console.log('Firstname : '+ person1.firstname)
+        console.log('Lastname : '+ person1.lastname)
+
+        // document.getElementById('firstname').innerText = person1.firstname;
+        // document.getElementById('lastname').innerText = person1.lastname;
+        
+        
+        
+
+
+        function displayname(){
+            person1.firstname = document.getElementById('firstnam').value;
+            person1.lastname = document.getElementById('lastnam').value;
+            document.getElementById('firstname').innerText = person1.firstname;
+            document.getElementById('lastname').innerText = person1.lastname;
+            
+        }
+
+    </script>
+</body>
+</html>
